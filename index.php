@@ -1,3 +1,6 @@
+<?php>
+echo hallo?;
+<?/php>
 <!DOCTYPE html>
 <html lang="en">
 <head>
