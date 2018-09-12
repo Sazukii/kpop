@@ -44,7 +44,7 @@
     let api_url = `https://www.googleapis.com/youtube/v3/playlistItems?&part=snippet&maxResults=50&playlistId=${playlist_id}&key=${api_key}&pageToken=${page_token}`;
     let y = 0;
     const knop = document.getElementById('knop');
-    const player = document.getElementById('player');
+    const onze_player = document.getElementById('onze_player');
     const giveUrl = document.getElementById('giveUrl');
     giveUrl.addEventListener('click', getUrl);
     const ajax = function (url, type) {
@@ -71,7 +71,7 @@
         function (data) {
                 const obj = JSON.parse(data);
                 let x = obj.items[y].snippet.resourceId.videoId;
-                player.innerHTML = `<iframe height="315" width="560" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" allowfullscreen frameborder="0" ></iframe>`;
+                onze_player.innerHTML = `<iframe height="315" width="560" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" allowfullscreen frameborder="0" ></iframe>`;
                 console.log(obj);
         },
         function (data) {
@@ -85,7 +85,7 @@
                 y++;
                 let nextPage = obj.nextPageToken;
                 let x = obj.items[y].snippet.resourceId.videoId;
-                player.innerHTML = `<iframe width="640" height="390" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" frameborder="0" ></iframe>`;
+                onze_player.innerHTML = `<iframe width="640" height="390" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" frameborder="0" ></iframe>`;
 
                 if (y === obj.items.length) {
                     page_token = nextPage;
