@@ -64,7 +64,7 @@
         function (data) {
                 const obj = JSON.parse(data);
                 let x = obj.items[y].snippet.resourceId.videoId;
-                player.innerHTML = `<iframe src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" frameborder="0" ></iframe>`;
+                player.innerHTML = `<iframe height="315" width="560" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" allowfullscreen frameborder="0" ></iframe>`;
                 console.log(obj);
         },
         function (data) {
