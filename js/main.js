@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function(){
         function (data) {
                 const obj = JSON.parse(data);
                 let x = obj.items[y].snippet.resourceId.videoId;
-                onze_player.innerHTML = `<iframe height="390" width="640" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" allowfullscreen frameborder="0" ></iframe>`;
+                onze_player.innerHTML += `<iframe height="390" width="640" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" allowfullscreen frameborder="0" ></iframe>`;
                 console.log(obj);
         },
         function (data) {
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 y++;
                 let nextPage = obj.nextPageToken;
                 let x = obj.items[y].snippet.resourceId.videoId;
-                onze_player.innerHTML = `<iframe height="390" width="640" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" frameborder="0" ></iframe>`;
+                onze_player.innerHTML += `<iframe height="390" width="640" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" frameborder="0" ></iframe>`;
 
                 if (y === obj.items.length) {
                     page_token = nextPage;
