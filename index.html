@@ -10,6 +10,7 @@
         }
         #player {
             position: relative;
+            
         }
         #player iframe{
             width: 100%;
@@ -63,7 +64,7 @@
         function (data) {
                 const obj = JSON.parse(data);
                 let x = obj.items[y].snippet.resourceId.videoId;
-                player.innerHTML = `<iframe width="640" height="390" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" frameborder="0" ></iframe>`;
+                player.innerHTML = `<iframe src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" frameborder="0" ></iframe>`;
                 console.log(obj);
         },
         function (data) {
@@ -100,7 +101,7 @@
         const match = myRegexp.exec(url);
         playlist_id = match[1];
     }
-
+    // width="640" height="390"
     // console.log(knop.addEventListener('click', p.then()));
 </script>
 </body>
