@@ -72,7 +72,7 @@
         function (data) {
                 const obj = JSON.parse(data);
                 let x = obj.items[y].snippet.resourceId.videoId;
-                onze_player.innerHTML = `<iframe max-height="315" max-width="560" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" allowfullscreen frameborder="0" ></iframe>`;
+                onze_player.innerHTML = `<iframe height="390" width="640" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" allowfullscreen frameborder="0" ></iframe>`;
                 console.log(obj);
         },
         function (data) {
@@ -86,7 +86,7 @@
                 y++;
                 let nextPage = obj.nextPageToken;
                 let x = obj.items[y].snippet.resourceId.videoId;
-                onze_player.innerHTML = `<iframe max-height="315" max-width="560" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" frameborder="0" ></iframe>`;
+                onze_player.innerHTML = `<iframe height="390" width="640" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" frameborder="0" ></iframe>`;
 
                 if (y === obj.items.length) {
                     page_token = nextPage;
