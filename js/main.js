@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-  const api_key = 'AIzaSyC2m64dCuhAKPKYgX-8RW2IWcomUfaUC08';
+    const api_key = '';
     let playlist_id = 'PLLcCSIwtLcGk5rgsXjAGy95bfUPxMY4uI';
     let page_token = "CDIQAQ";
     let autoplay = 0;
