@@ -14,7 +14,8 @@
             padding-top: 35px;
             height: 0;
             overflow: hidden;
-            
+            max-height: 390px;
+            max-width: 640px;
             
         }
         #onze_player iframe{
@@ -86,7 +87,7 @@
                 y++;
                 let nextPage = obj.nextPageToken;
                 let x = obj.items[y].snippet.resourceId.videoId;
-                onze_player.innerHTML = `<iframe width="640" height="390" src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" frameborder="0" ></iframe>`;
+                onze_player.innerHTML = `<iframe src="https://www.youtube.com/embed/${x}?autoplay=${autoplay}" frameborder="0" ></iframe>`;
 
                 if (y === obj.items.length) {
                     page_token = nextPage;
