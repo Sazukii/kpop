@@ -72,4 +72,4 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     // console.log(knop.addEventListener('click', p.then()));
 
-}
+)};
